@@ -13,7 +13,7 @@ for n in ntitles:
     notices=n.a.text.strip()
     
     with open('notice.txt',"a") as file:
-        file.write(notices)
+        file.write(notices+'\n')
         file.close()
     print(notices)
         
