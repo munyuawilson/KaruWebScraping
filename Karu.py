@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 import lxml
 url="https://karu.ac.ke/student-notice-board/"
-get=requests.get(url).text
+get=requests.get(url,verify=False).text
 content=BeautifulSoup(get,'html.parser')
 All_div=content.find('div',class_="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first")
 
